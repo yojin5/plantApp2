@@ -1,0 +1,110 @@
+    cat > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# Local env files
+.env*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+EOF
+fi
+
+# Create README
+echo "📖 Creating README..."
+cat > PROJECT_STRUCTURE.md << 'EOF'
+# Plant Care App - Project Structure
+
+## Directory Structure
+
+```
+src/
+├── entities/          # Entity layer - Domain models with business logic
+├── types/            # TypeScript type definitions and interfaces
+├── enums/            # Enumerations for status, types, etc.
+├── controllers/      # Control layer - Business logic orchestration
+├── repositories/     # Data access layer - CRUD operations
+├── screens/          # Boundary layer - UI screens
+│   ├── auth/        # Authentication screens
+│   ├── plants/      # Plant management screens
+│   ├── community/   # Community features screens
+│   └── help/        # Help request screens
+├── components/       # Reusable UI components
+├── services/        # External service integrations
+├── utils/           # Utility functions
+└── navigation/      # Navigation configuration
+```
+
+## BCE Architecture
+
+**Boundary**: All files in `screens/` and `components/`
+**Control**: All files in `controllers/`
+**Entity**: All files in `entities/`
+
+## Getting Started
+
+1. Install dependencies: `npm install`
+2. Start development: `npm start`
+3. Open Expo Go app and scan QR code
+
+## Team Roles
+
+- **Jerick**: Controllers & Integration
+- **Vivian**: Entities & Types
+- **Charles**: Screens & Components
+- **Yojin**: Services & Testing
+EOF
+
+echo ""
+echo "✅ Project structure created successfully!"
+echo ""
+echo "📂 Created directories:"
+echo "   - src/entities (10 files)"
+echo "   - src/types (5 files)"
+echo "   - src/enums (6 files)"
+echo "   - src/controllers (8 files)"
+echo "   - src/repositories (6 files)"
+echo "   - src/screens (13 files)"
+echo "   - src/components (8 files)"
+echo "   - src/services (4 files)"
+echo "   - src/utils (5 files)"
+echo "   - src/navigation (1 file)"
+echo "   - assets/images"
+echo "   - assets/fonts"
+echo ""
+echo "📖 See PROJECT_STRUCTURE.md for more information"
+echo ""
+echo "🚀 Next steps:"
+echo "   1. Open project in VS Code: code ."
+echo "   2. Start filling in the files with code"
+echo "   3. Run: npm start"
+echo ""
