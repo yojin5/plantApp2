@@ -1,0 +1,6 @@
+export enum WateringMethod {
+  MANUAL = 'MANUAL',
+  AUTOMATIC = 'AUTOMATIC',
+  RAINFALL = 'RAINFALL',
+  HELPED_BY_COMMUNITY = 'HELPED_BY_COMMUNITY'
+}
